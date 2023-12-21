@@ -1,0 +1,46 @@
+.RegForm {
+  width: 100vw;
+  height: calc(100vh - 70px);
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+}
+.fields {
+  margin-top: 15px;
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  height: fit-content;
+}
+input {
+  outline: none;
+  border: none;
+  padding: 15px;
+  border-radius: 6px;
+}
+.btn {
+  margin-top: 20px;
+}
+.btn .submit {
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: green;
+  cursor: pointer;
+}
+.btn .submit:hover {
+  background-color: rgb(1, 73, 1);
+  font-weight: 600;
+}
+#phone::-webkit-inner-spin-button,
+#phone::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}

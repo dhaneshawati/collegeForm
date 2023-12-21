@@ -1,0 +1,23 @@
+.student {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.data {
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #df826c;
+  width: 100px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+.data .data-field {
+  font-weight: 600;
+  color: purple;
+}
+.data .data-content {
+  color: black;
+}
