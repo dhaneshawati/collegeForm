@@ -2,24 +2,24 @@ import React, { useEffect, useState } from "react";
 import Student from "./Student";
 import "./StudentsData.css";
 import { useNavigate } from "react-router-dom";
+import { getData } from "../services/api";
 
 function StudentsData() {
   const [studentInfo, setStudentInfo] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    getData();
+    handleData();
   }, []);
 
-  const getData = async () => {
-    // ** It is an API for getData from DB and send response of all documents as json
-    fetch("/api/auth/studentData")
-      .then((res) => res.json())
-      .then((studentData) => {
-        setStudentInfo([...studentData.data]);
-      });
+  const handleData = async () => {
+    const dataResponse = await getData();
+    console.log(dataResponse);
+    // const data = await dataResponse.json();
+    setStudentInfo([...dataResponse]);
+    console.log(studentInfo);
   };
   const handleRegistration = () => {
-    navigate("/");
+    navigate("/registration");
   };
   return (
     <div className="studentsData">
