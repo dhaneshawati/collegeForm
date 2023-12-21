@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
 import { useNavigate } from "react-router-dom";
+import { createStudent } from "../services/api";
 
 function Form() {
   const navigate = useNavigate();
@@ -29,7 +30,13 @@ function Form() {
         hscMarks <= 100 &&
         studentAddress !== ""
       ) {
-        await createStudent();
+        await createStudent(
+          studentName,
+          studentNumber,
+          sscMarks,
+          hscMarks,
+          studentAddress
+        );
         setStudentName("");
         setStudentNumber(0);
         setSscMarks(0);
@@ -65,29 +72,6 @@ function Form() {
       }
     } catch (err) {
       console.log("Error adding document: ", err);
-    }
-  };
-
-  const createStudent = async () => {
-    try {
-      fetch("/api/auth/registration", {
-        method: "POST",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          studentName: studentName,
-          studentPhoneNumber: studentNumber,
-          sscMarks: sscMarks,
-          hscMarks: hscMarks,
-          address: studentAddress,
-        }),
-      })
-        .then((res) => res.json())
-        .then((data) => console.log(data));
-    } catch (error) {
-      console.log(error);
     }
   };
 

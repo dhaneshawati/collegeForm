@@ -15,3 +15,12 @@ This is a sample app made for college student registration.
     <li>Storing student data in mongoDB through backend</li>
     <li>Retrieving stored data in mongoDB to show it on page</li>
 </ul>
+
+<h5> Changes made under review-1: </h5>
+<ol>
+    <li>Frontend -> added all api calls in service folder. </li>
+    <li>Frontend -> removed junk or unused files.</li>
+    <li>Frontend -> removed unused dependecies.</li>
+    <li>server-> changed utils folder to service folder.</li>
+    <li>readme-> documented all the changes.</li>
+</ol>
