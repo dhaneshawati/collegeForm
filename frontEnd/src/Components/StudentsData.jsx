@@ -13,10 +13,7 @@ function StudentsData() {
 
   const handleData = async () => {
     const dataResponse = await getData();
-    console.log(dataResponse);
-    // const data = await dataResponse.json();
     setStudentInfo([...dataResponse]);
-    console.log(studentInfo);
   };
   const handleRegistration = () => {
     navigate("/registration");

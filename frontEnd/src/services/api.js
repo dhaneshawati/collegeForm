@@ -32,8 +32,6 @@ export const getData = async () => {
   // ** It is an API for getData from DB and send response of all documents as json
   const response = await fetch("/api/auth/studentData");
   const studentData = await response.json();
-  console.log(studentData);
   stuData = studentData.data;
-  console.log(stuData);
   return stuData;
 };

@@ -3,7 +3,7 @@ require("dotenv").config(); ///* Required when we use .env file for securing URI
 const app = express();
 const PORT = 5000;
 const router = require("./router/auth-router"); // required for creating routes
-const connectDB = require("./utils/db");
+const connectDB = require("./service/db");
 const cors = require("cors");
 
 app.use(express.json()); // MIDDLEWARE for req.body JSON File
