@@ -3,6 +3,6 @@ const router = express.Router();
 const { home, register, getData } = require("../controllers/auth-controller");
 
 router.get("/", home);
-router.get("/studentData", getData);
-router.route("/registration").post(register);
+router.post("/studentData", getData); // POST is more secure than GET for getting data
+router.post("/registration", register);
 module.exports = router;

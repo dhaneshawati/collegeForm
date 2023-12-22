@@ -24,3 +24,11 @@ This is a sample app made for college student registration.
     <li>server-> changed utils folder to service folder.</li>
     <li>readme-> documented all the changes.</li>
 </ol>
+<h5> Changes made under review-2: </h5>
+<ol>
+    <li>server -> used code uniformity in router file. </li>
+    <li>server -> Added server side validations for request body.</li>
+    <li>server-> For getting the data, GET method changed to POST method.</li>
+    <li>Frontend -> GET method changed to POST method in api file in service folder.</li>
+    <li>readme-> documented all the changes.</li>
+</ol>

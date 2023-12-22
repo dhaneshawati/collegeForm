@@ -30,7 +30,16 @@ export const createStudent = async (
 export const getData = async () => {
   let stuData = [];
   // ** It is an API for getData from DB and send response of all documents as json
-  const response = await fetch("/api/auth/studentData");
+  const response = await fetch("/api/auth/studentData", {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      message: "Getting the data from database",
+    }),
+  });
   const studentData = await response.json();
   stuData = studentData.data;
   return stuData;
